@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READMAX - Books</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .navbar-brand, .nav-link {
+            color: #ff0000 !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #cc0000 !important;
+        }
+        .section-title {
+            color: #ff0000;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease;
+        }
+        .card {
+            background-color: #2a2a2a;
+            border: none;
+            color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3);
+        }
+        .card-img-top {
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 2px solid #ff0000;
+        }
+        .card-title {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #ff0000;
+            border-color: #ff0000;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #cc0000;
+            border-color: #cc0000;
+            transform: scale(1.05);
+        }
+        .reviews-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ff0000;
+        }
+        .review {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .review-rating {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #cc0000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">READMAX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Books Section -->
+    <section id="books" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Our Book Collection</h2>
+            <!-- Row 1 -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4 mb-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/expedition.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">The Great Expedition</h5>
+                            <p class="card-text">Author: Jane Explorer</p>
+                            <p class="card-text">A thrilling tale of adventure across uncharted lands.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.5/5</span> - "An exhilarating read!" - Alex
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4/5</span> - "Loved the vivid descriptions." - Sarah
+                                </div>
+                            </div>
+                            <a href="book1.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/unhearted.jfif" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Hearts Unraveled</h5>
+                            <p class="card-text">Author: Emily Stone</p>
+                            <p class="card-text">A deep exploration of human emotions.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.8/5</span> - "Emotionally gripping!" - Mia
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4.2/5</span> - "Touching and relatable." - John
+                                </div>
+                            </div>
+                            <a href="book2.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/shadow.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Shadows of Secrets</h5>
+                            <p class="card-text">Author: Mark Riddle</p>
+                            <p class="card-text">A gripping mystery that keeps you guessing.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.3/5</span> - "Kept me up all night!" - Emma
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4/5</span> - "Twists were amazing." - Liam
+                                </div>
+                            </div>
+                            <a href="book3.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/echo past.jfif" class="card-img-top" alt="Book 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Echoes of the Past</h5>
+                            <p class="card-text">Author: Clara Holt</p>
+                            <p class="card-text">A deep dive into historical events.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.6/5</span> - "Rich and informative." - David
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4.1/5</span> - "Fascinating history!" - Anna
+                                </div>
+                            </div>
+                            <a href="book4.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/bondtime.jfif" class="card-img-top" alt="Book 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Bonds of Time</h5>
+                            <p class="card-text">Author: Lily Friend</p>
+                            <p class="card-text">A heartwarming tale of friendship.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.7/5</span> - "Heartfelt and moving." - Sophie
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4.4/5</span> - "Loved the characters." - Tom
+                                </div>
+                            </div>
+                            <a href="book5.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/gatalic.jfif" class="card-img-top" alt="Book 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Galactic Odyssey</h5>
+                            <p class="card-text">Author: Sam Cosmos</p>
+                            <p class="card-text">A thrilling sci-fi adventure.</p>
+                            <div class="reviews-section">
+                                <div class="review">
+                                    <span class="review-rating">4.9/5</span> - "Epic space journey!" - Rachel
+                                </div>
+                                <div class="review">
+                                    <span class="review-rating">4.5/5</span> - "Mind-blowing concepts." - Ethan
+                                </div>
+                            </div>
+                            <a href="book6.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 READMAX. All Rights Reserved.</p>
+            <p>Contact us: <a href="mailto:info@readmax.com">info@readmax.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
